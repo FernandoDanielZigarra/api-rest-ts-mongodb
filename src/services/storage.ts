@@ -1,4 +1,4 @@
-import { Storage } from "../interface/storage"
+/* import { Storage } from "../interface/storage"
 import StorageModel from "../models/storage"
 
 const registerUpload = async ({ fileName, idUser, path }: Storage) => {
@@ -6,4 +6,4 @@ const registerUpload = async ({ fileName, idUser, path }: Storage) => {
     return responseUpload
 }
 
-export { registerUpload }
+export { registerUpload } */

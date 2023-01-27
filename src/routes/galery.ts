@@ -1,12 +1,13 @@
 import { Router } from "express";
-import { deleteImage, getImage, getImages, postImage, updateImage } from "../controllers/galery";
+import { deleteItemGalery, getItemGalery, getAllGalery, postItemGalery, updateItemGalery } from "../controllers/galery";
+import multerMiddleware from '../middlewares/file'
 
 const router = Router()
 
-router.get('/', getImages)
-        .post('/', postImage)
-        .get('/:id', getImage)
-        .put('/:id', updateImage)
-        .delete('/:id', deleteImage)
+router.get('/', getAllGalery)
+        .post('/', multerMiddleware.single('myfile'), postItemGalery)
+        .get('/:id', getItemGalery)
+        .put('/:id', updateItemGalery)
+        .delete('/:id', deleteItemGalery)
 
 export { router }
